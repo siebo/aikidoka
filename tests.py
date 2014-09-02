@@ -25,7 +25,7 @@ class AikidokaListViewTests(TestCase):
         self.assertEquals(list(response.context['object_list']), [])
 
         Aikidoka.objects.create(first_name='Gozo', last_name='Shioda')
-        response = client.get('/')
+        response = client.get('/aikidoka')
         self.assertEquals(response.context['object_list'].count(), 1)
 
     def test_aikidoka_in_the_context_request_factory(self):
