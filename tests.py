@@ -1,5 +1,5 @@
 from django.test import TestCase
-from .models import Dojo
+from .models import Aikidoka
 
 
 class AikidokaTests(TestCase):
