@@ -17,7 +17,7 @@ class AikidokaTests(TestCase):
 class AikidokaListViewTests(TestCase):
     """Aikidoka list view tests."""
 
-    def test_aikidokas_in_the_context(self): 
+    def test_aikidoka_in_the_context(self): 
 
         client = Client()
         response = client.get('/')
@@ -28,15 +28,15 @@ class AikidokaListViewTests(TestCase):
         response = client.get('/')
         self.assertEquals(response.context['object_list'].count(), 1)
 
-    def test_aikidokas_in_the_context_request_factory(self):
+    def test_aikidoka_in_the_context_request_factory(self):
 
         factory = RequestFactory()
         request = factory.get('/')
 
-        response = ListAikidokasView.as_view()(request)
+        response = ListAikidokaView.as_view()(request)
 
         self.assertEquals(list(response.context_data['object_list']), [])
 
         Aikidoka.objects.create(first_name='Moriteru', last_name='Ueshiba')
-        response = ListAikidokasView.as_view()(request)
+        response = ListAikidokaView.as_view()(request)
         self.assertEquals(response.context_data['object_list'].count(), 1)
