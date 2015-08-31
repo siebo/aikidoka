@@ -12,6 +12,10 @@ class Aikidoka(models.Model):
         max_length=255,
     )
 
+    rank = models.CharField(
+        max_length=8,
+    )
+
     address = models.CharField(
         max_length=255,
     )
