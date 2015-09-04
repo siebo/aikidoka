@@ -22,11 +22,11 @@ class Aikidoka(models.Model):
       )
 
     first_name = models.CharField(
-        max_length=255,
+        max_length=32,
     )
 
     last_name = models.CharField(
-        max_length=255,
+        max_length=32,
     )
 
     rank = models.CharField(
@@ -40,7 +40,7 @@ class Aikidoka(models.Model):
     )
 
     city = models.CharField(
-        max_length=255,
+        max_length=32,
     )
 
     state = models.CharField(
