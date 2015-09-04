@@ -11,14 +11,14 @@ class Aikidoka(models.Model):
           ('3kyu', '3rd kyu'),
           ('2kyu', '2nd kyu'),
           ('1kyu', '1st kyu'),
-          ('1dan', 'shodan'),
-          ('2dan', 'nidan'),
-          ('3dan', 'sandan'),
-          ('4dan', 'yondan'),
-          ('5dan', 'godan'),
-          ('6dan', 'rokudan'),
-          ('7dan', 'shichidan'),
-          ('8dan', 'hachidan'),
+          ('1dan', 'shodan (1st Dan)'),
+          ('2dan', 'nidan (2nd Dan)'),
+          ('3dan', 'sandan (3rd Dan)'),
+          ('4dan', 'yondan (4th Dan)'),
+          ('5dan', 'godan (5th Dan)'),
+          ('6dan', 'rokudan (6th Dan)'),
+          ('7dan', 'shichidan (7th Dan)'),
+          ('8dan', 'hachidan (8th Dan)'),
       )
 
     first_name = models.CharField(
